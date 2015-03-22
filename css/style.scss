@@ -1,0 +1,82 @@
+// variables:
+$custom_background_image: '../img/IMG_6438.JPG';
+$picture_card_background: #FFF4D8;
+$picture_card_description_font_family: sans-serif;
+$picture_card_description_picture_card_background: rgba(1, 1, 1, 0.1);
+$navbar_background_color:  $picture_card_background;
+$navbar_item_hover: $picture_card_background;
+//----------------------------------------------
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+@mixin hover_enlarge($scale_size) {
+	-webkit-transform: scale($scale_size);
+	-moz-transform: scale($scale_size);
+	-o-transform: scale($scale_size);
+	-ms-transform: scale($scale_size);	
+}
+
+
+
+body {
+	padding-top: 70px;
+	background: url($custom_background_image) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.picture_card {
+	
+	background: $picture_card_background;
+	text-align: center;
+	padding: 2%;
+	box-shadow: 1px 1px 3px;
+	border-radius: 5px;
+	
+		img {
+		width: 100%;
+		max-width: 200px;
+		max-height: 150px;
+		margin-top:  20px;
+		}
+		
+		&:hover {
+		@include hover_enlarge(1.05);	
+		}
+}
+
+
+
+.picture_card_description {
+	font-family: $picture_card_description_font_family;
+	vertical-align: middle;
+	background: $picture_card_description_picture_card_background;
+	padding: 5px 10px 5px 10px;
+	margin: 10px 10px 5px 10px;
+}
+.picture_card_description_date {
+	font-weight: 700;
+}
+
+.navbar {
+	//background-color: $navbar_background_color;
+		li:hover {
+		background-color: $navbar_item_hover;
+		}
+}
+
+#no_images {
+	background: #F0F0F0;
+	padding: 20px;
+	text-align: center;
+	font-size: xx-large;
+}
