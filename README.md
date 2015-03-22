@@ -11,4 +11,4 @@ This is a simple PHP script that scans the content of a directory for files with
 * **lightbox** javascripts for image preview and slideshow
 * **SASS** integration for CSS for faster deployment
 
-More information and a ready-to-use preview: [mindefrag.net/](http://mindefrag.net/projects/php-gallery/) 
+More information and a ready-to-use preview: [mindefrag.net](http://mindefrag.net/projects/php-gallery/) 
